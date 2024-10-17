@@ -1,0 +1,50 @@
+{
+    "user": "initiate_db",
+    "action": "checkout",
+    "log": {
+      "items": [
+        {
+          "_id": "Mango",
+          "name": "Mango",
+          "price": 6.8,
+          "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/mango.jpg",
+          "category": "Fruits",
+          "description": "Tropical and delicious Mango, a summer favorite for many.",
+          "quantity": 10
+        },
+        {
+          "_id": "Grapes",
+          "name": "Grapes",
+          "price": 5.98,
+          "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/grapes.jpg",
+          "category": "Fruits",
+          "description": "Juicy and flavorful Grapes, a delightful addition to your fruit basket.",
+          "quantity": 10
+        },
+        {
+          "_id": "Banana",
+          "name": "Banana",
+          "price": 1.69,
+          "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/banana.jpg",
+          "category": "Fruits",
+          "description": "Naturally sweet Banana, perfect for quick energy boosts.",
+          "quantity": 10
+        },
+        {
+          "_id": "Apple",
+          "name": "Apple",
+          "price": 2.34,
+          "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
+          "category": "Fruits",
+          "description": "Sweet and crisp Apple, a healthy snack for any time of the day.",
+          "quantity": 20
+        }
+      ],
+      "extras": {
+        "totalQuantity": 50,
+        "totalPrice": 191.5,
+        "date": "19/12/2023"
+      }
+    },
+    "date": "Sat, 23 Dec 2023 20:38:10 GMT"
+  }

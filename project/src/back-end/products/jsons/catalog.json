@@ -1,0 +1,10 @@
+{"_id": "Brocolli", "name": "Brocolli", "price": 2.73, "image": "modified_for_privacy", "category": "Vegetables", "description": "Fresh and nutritious Brocolli at a great price."}
+{"_id": "Cauliflower", "name": "Cauliflower", "price": 6.3, "image": "modified_for_privacy", "category": "Vegetables", "description": "High-quality Cauliflower known for its versatility and taste."}
+{"_id": "Cucumber", "name": "Cucumber", "price": 5.6, "image": "modified_for_privacy", "category": "Vegetables", "description": "Crunchy and refreshing Cucumber for your salads and snacks."}
+{"_id": "Beetroot", "name": "Beetroot", "price": 8.7, "image": "modified_for_privacy", "category": "Vegetables", "description": "Nutrient-rich Beetroot with a vibrant color and earthy flavor."}
+{"_id": "Apple", "name": "Apple", "price": 2.34, "image": "modified_for_privacy", "category": "Fruits", "description": "Sweet and crisp Apple, a healthy snack for any time of the day."}
+{"_id": "Banana", "name": "Banana", "price": 1.69, "image": "modified_for_privacy", "category": "Fruits", "description": "Naturally sweet Banana, perfect for quick energy boosts."}
+{"_id": "Grapes", "name": "Grapes", "price": 5.98, "image": "modified_for_privacy", "category": "Fruits", "description": "Juicy and flavorful Grapes, a delightful addition to your fruit basket."}
+{"_id": "Mango", "name": "Mango", "price": 6.8, "image": "modified_for_privacy", "category": "Fruits", "description": "Tropical and delicious Mango, a summer favorite for many."}
+
+

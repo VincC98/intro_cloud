@@ -1,0 +1,80 @@
+version: "3"
+services:     # list all services for your application
+    # server that listens HTTP requests of all microservice
+  gateway-daemon:
+    image: vincentcamma98/scapp-gateway:latest
+    # expose port number 3010 of host running this service
+    ports: [ "3010:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+  # server that listens HTTP requests for authentification microservice
+  users-daemon:
+    image: vincentcamma98/scapp-auth:latest
+    # link both services (same effect of option --link in docker run)
+    depends_on: [ "users-db" ]
+    # expose port number 3001 of host running this service
+    ports: [ "3001:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+    # server that listens HTTP requests for the carts microservice
+  carts-daemon:
+    image: vincentcamma98/scapp-carts:latest
+    # expose port number 3004 of host running this service
+    ports: [ "3004:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+# server that listens HTTP requests for the checkouts microservice
+  checkouts-daemon:
+    image: vincentcamma98/scapp-checkouts:latest
+    # expose port number 3005 of host running this service
+    ports: [ "3005:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+    # server that listens HTTP requests for the products microservice
+  products-daemon:
+    image: vincentcamma98/scapp-products:latest
+    # expose port number 3009 of host running this service
+    ports: [ "3009:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+    # server that listens HTTP requests for the logs microservice
+  logs-daemon:
+    image: vincentcamma98/scapp-logs:latest
+    # expose port number 3007 of host running this service
+    ports: [ "3007:80" ]
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks: [ "scapp-net" ]
+
+  # Docker GUI for swarms
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports: [ "80:8080" ]
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      # locate this service in the swarm manager
+      placement:
+        constraints:
+          - node.role == manager
+    networks: [ "scapp-net" ]
+networks:
+  scapp-net:
+    external: true

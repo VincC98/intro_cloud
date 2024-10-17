@@ -1,0 +1,25 @@
+FROM node:20 AS build
+
+WORKDIR /app
+
+COPY package.json ./
+
+RUN npm install
+COPY . ./
+RUN npm run build
+
+CMD node build# this is a Docker image of a minimalistic GNU/Linux distribution
+FROM alpine
+
+# set the working directory (inside the container)
+WORKDIR /usr/hello
+
+# store version of OS in a file
+RUN echo "$(uname -v)!" > os_version.txt
+
+# this instruction sets an environment variable
+ENV CURRENT_DIR "/usr/hello"
+
+# CMD is the instruction to run when a container starts; note that the
+#   previously-set environment variables can be used.
+CMD echo -e "Welcome to $(cat ${CURRENT_DIR}/os_version.txt)\nYour location is `pwd`."
